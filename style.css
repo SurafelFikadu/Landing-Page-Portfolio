@@ -7,13 +7,13 @@
 }
 
 body {
-    background-image: linear-gradient(30deg, red, blue 30%, white 64%, blue 33%, red);
-    /* opacity: 0.5; */
+    background-image: linear-gradient(30deg, red, blue 12%, black 64%, blue 33%, red 100%);
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
+    min-height: 100vh;
 }
 
 main {
@@ -21,33 +21,134 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* height: 100vh; */
     width: 100vw;
     position: absolute;
+}
+
+h1 {
+    color: white;
+    padding: 20px;
+    font-size: 2.2rem;
+}
+
+.paragraph {
+    max-width: 1000px;
+    padding: 20px;
+    margin: auto;
+    min-width: 690px;
+}
+
+.paragraph p {
+    font-size: 2rem;
+    color: rgb(248, 248, 248);
+}
+
+h2 {
+    color: white;
+    font-size: 1.8rem;
 }
 
 .sec-1 {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
     width: 100vw;
-    max-width: 1200px;
-    /* gap: 100px; */
 }
 
 img {
-    width: 150px;
+    width: 300px;
+}
+
+figure {
+    margin: 10px 5vw;
+}
+
+.img {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1000px;
+    padding: 20px;
+    margin: auto;
+}
+
+figcaption {
+    font-size: 1.5rem;
+    color: wheat;
+}
+
+.img-1 {
+    top: 30%;
+    right: 10%;
 }
 
 button {
-    padding: 10px 20px;
+    padding: 40px;
     background-color: rgb(26, 199, 211);
-    position: absolute;
-    top: 99%;
-    /* left: 10%; */
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    font-size: 1.5rem;
+    margin: 30px;
 }
 
+button:hover {
+    background: rgb(128, 74, 74);
+    color: white;
+    border-radius: 30%;
+}
+
+
 a {
-    text-decoration: none;
-    color: rgb(10, 10, 10);
+    position: absolute;
+    inset: 0;
+}
+
+@media(max-width: 700px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .paragraph {
+        min-width: 350px;
+        padding: 10px;
+        max-width: 690px;
+    }
+
+    .paragraph p {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .img {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        max-width: 1000px;
+        padding: 20px;
+        margin: auto;
+    }
+
+    img {
+        width: 350px;
+    }
+
+    figure {
+        margin: 5vh 5vw;
+        margin-top: 0;
+    }
+
+    figcaption {
+        font-size: 1.8rem;
+    }
+
+    button {
+        padding: 30px;
+        border-radius: 50%;
+        cursor: pointer;
+        position: relative;
+        font-size: 1.3rem;
+    }
+
 }
